@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ============ SEO META TAGS ============ -->
+<title>UPT Puskesmas Mentikan | Pelayanan Kesehatan Kota Mojokerto</title>
+<meta name="description" content="UPT Puskesmas Mentikan - Melayani dengan Profesional, Cepat, Ramah, dan Berkualitas. Layanan kesehatan masyarakat Kelurahan Mentikan, Kecamatan Prajurit Kulon, Kota Mojokerto.">
+<meta name="keywords" content="puskesmas mentikan, puskesmas mojokerto, kesehatan mojokerto, daftar online puskesmas, BPJS mentikan">
+<meta name="author" content="UPT Puskesmas Mentikan">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://puskesmasmentikan.id/">
+
+<!-- ============ OPEN GRAPH META TAGS ============ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="UPT Puskesmas Mentikan | Pelayanan Kesehatan Kota Mojokerto">
+<meta property="og:description" content="Melayani dengan Profesional, Cepat, Ramah, dan Berkualitas.">
+<meta property="og:image" content="https://placehold.co/1200x630/0EA5E9/FFFFFF?text=UPT+Puskesmas+Mentikan">
+<meta property="og:url" content="https://puskesmasmentikan.id/">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ============ FAVICON ============ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230EA5E9'/%3E%3Crect x='42' y='20' width='16' height='60' rx='4' fill='white'/%3E%3Crect x='20' y='42' width='60' height='16' rx='4' fill='white'/%3E%3C/svg%3E">
+
+<!-- ============ FONTS ============ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============ ICONS (Lucide) ============ -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+<style>
+/* ==========================================================
+   UPT PUSKESMAS MENTIKAN — STYLESHEET
+   Design tokens: warna kesehatan resmi sesuai brief
+   ========================================================== */
+
+:root{
+  /* ---- Warna utama (sesuai brief) ---- */
+  --white:#FFFFFF;
+  --blue:#0EA5E9;
+  --blue-dark:#0284C7;
+  --green:#10B981;
+  --green-dark:#059669;
+  --gray-soft:#F8FAFC;
+
+  /* ---- Warna pendukung ---- */
+  --ink:#0F172A;
+  --ink-soft:#475569;
+  --border:#E2E8F0;
+  --danger:#EF4444;
+
+  --gradient-main: linear-gradient(135deg, var(--blue) 0%, var(--green) 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(14,165,233,.08), rgba(16,185,129,.08));
+
+  /* ---- Tipografi ---- */
+  --font-display:'Sora', sans-serif;
+  --font-body:'Manrope', sans-serif;
+
+  /* ---- Layout ---- */
+  --container:1200px;
+  --radius-sm:10px;
+  --radius-md:16px;
+  --radius-lg:24px;
+  --shadow-sm:0 4px 14px rgba(15,23,42,.06);
+  --shadow-md:0 12px 32px rgba(15,23,42,.10);
+  --shadow-lg:0 20px 50px rgba(15,23,42,.14);
+  --transition: .35s cubic-bezier(.4,0,.2,1);
+
+  --header-h:78px;
+}
+
+/* ---------- DARK MODE TOKENS ---------- */
+body.dark{
+  --white:#0B1220;
+  --gray-soft:#0F172A;
+  --ink:#F1F5F9;
+  --ink-soft:#94A3B8;
+  --border:#1E293B;
+}
+
+/* ==========================================================
+   RESET & BASE
+   ========================================================== */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.6;
+  overflow-x:hidden;
+  transition:background var(--transition), color var(--transition);
+}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+h1,h2,h3,h4,h5{font-family:var(--font-display);color:var(--ink);line-height:1.2;}
+.container{max-width:var(--container);margin:0 auto;padding:0 24px;}
+
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
+}
+
+/* ==========================================================
+   LOADING SCREEN
+   ========================================================== */
+#loading-screen{
+  position:fixed;inset:0;z-index:9999;
+  background:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .5s ease, visibility .5s ease;
+}
+#loading-screen.hidden{opacity:0;visibility:hidden;}
+.pulse-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;}
+.pulse-line{width:200px;height:60px;}
+.pulse-line polyline{
+  fill:none;stroke:var(--blue);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:300;stroke-dashoffset:300;
+  animation:drawPulse 1.4s ease-in-out infinite;
+}
+@keyframes drawPulse{
+  0%{stroke-dashoffset:300;}
+  60%{stroke-dashoffset:0;}
+  100%{stroke-dashoffset:0;opacity:0;}
+}
+.loading-text{font-family:var(--font-display);font-weight:700;color:var(--ink-soft);font-size:14px;letter-spacing:.04em;}
+
+/* ==========================================================
+   HEADER / NAVBAR
+   ========================================================== */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:var(--header-h);
+  display:flex;align-items:center;
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(14px) saturate(160%);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);
+  border-bottom:1px solid transparent;
+  transition:all var(--transition);
+}
+body.dark .site-header{background:rgba(11,18,32,.7);}
+.site-header.scrolled{
+  background:rgba(255,255,255,.92);
+  box-shadow:var(--shadow-sm);
+  border-bottom-color:var(--border);
+}
+body.dark .site-header.scrolled{background:rgba(11,18,32,.92);}
+
+.header-inner{display:flex;align-items:center;justify-content:space-between;width:100%;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-logo{width:46px;height:46px;border-radius:12px;object-fit:cover;background:var(--gradient-main);}
+.brand-text{display:flex;flex-direction:column;}
+.brand-text strong{font-family:var(--font-display);font-size:16px;font-weight:700;}
+.brand-text small{font-size:11px;color:var(--ink-soft);font-weight:500;}
+
+.main-nav{display:flex;gap:28px;}
+.main-nav a{
+  font-size:14.5px;font-weight:600;color:var(--ink-soft);
+  position:relative;padding:6px 0;transition:color var(--transition);
+}
+.main-nav a::after{
+  content:'';position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:var(--gradient-main);transition:width var(--transition);border-radius:2px;
+}
+.main-nav a:hover{color:var(--blue);}
+.main-nav a:hover::after{width:100%;}
+
+.header-actions{display:flex;align-items:center;gap:10px;}
+.icon-btn{
+  width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:var(--ink-soft);transition:all var(--transition);
+}
+.icon-btn:hover{background:var(--gray-soft);color:var(--blue);}
+.icon-btn i{width:20px;height:20px;}
+.nav-toggle{display:none;}
+
+/* ---------- Mobile nav drawer ---------- */
+.mobile-nav{
+  position:fixed;top:0;right:-100%;width:min(320px,84vw);height:100vh;z-index:1100;
+  background:var(--white);box-shadow:var(--shadow-lg);
+  display:flex;flex-direction:column;gap:6px;padding:100px 28px 28px;
+  transition:right var(--transition);
+}
+.mobile-nav.open{right:0;}
+.mobile-nav a{padding:12px 0;font-weight:600;font-size:15px;border-bottom:1px solid var(--border);}
+.mobile-nav .btn{margin-top:16px;}
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 26px;border-radius:50px;font-weight:700;font-size:14.5px;
+  transition:all var(--transition);white-space:nowrap;
+}
+.btn i{width:18px;height:18px;}
+.btn-primary{background:var(--gradient-main);color:#fff;box-shadow:0 10px 24px rgba(14,165,233,.30);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(14,165,233,.38);}
+.btn-ghost{background:rgba(255,255,255,.16);color:#fff;border:1.5px solid rgba(255,255,255,.55);backdrop-filter:blur(6px);}
+.btn-ghost:hover{background:rgba(255,255,255,.3);transform:translateY(-3px);}
+.btn-outline{border:1.5px solid var(--border);color:var(--ink);}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue);}
+.btn-sm{padding:10px 20px;font-size:13.5px;}
+.btn-block{width:100%;}
+.header-cta{display:inline-flex;}
+
+/* ==========================================================
+   SECTION COMMON
+   ========================================================== */
+section{padding:90px 0;position:relative;}
+.section-head{max-width:640px;margin:0 auto 50px;text-align:center;}
+.section-head.light{color:#fff;}
+.section-head.light p{color:rgba(255,255,255,.85);}
+.section-tag{
+  display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;
+  color:var(--blue);background:rgba(14,165,233,.1);padding:6px 16px;border-radius:50px;margin-bottom:14px;
+}
+.section-head.light .section-tag{background:rgba(255,255,255,.16);color:#fff;}
+.section-head h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:12px;font-weight:800;}
+.section-head p{color:var(--ink-soft);font-size:15.5px;}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  overflow:hidden;color:#fff;
+}
+.hero-slider{position:absolute;inset:0;z-index:0;}
+.hero-slide{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1.2s ease;
+}
+.hero-slide.active{opacity:1;}
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg, rgba(15,23,42,.55) 0%, rgba(2,30,46,.72) 60%, rgba(2,30,46,.86) 100%);
+}
+.medical-pattern{
+  position:absolute;inset:0;z-index:1;opacity:.12;pointer-events:none;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 38px, rgba(255,255,255,.5) 38px 40px, transparent 40px 78px),
+    repeating-linear-gradient(90deg, transparent 0 38px, rgba(255,255,255,.5) 38px 40px, transparent 40px 78px);
+  -webkit-mask-image:radial-gradient(circle at 50% 30%, black 0%, transparent 75%);
+}
+.medical-pattern.dark{opacity:.07;}
+.hero-content{position:relative;z-index:2;text-align:center;margin:0 auto;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;
+  letter-spacing:.08em;color:#A7F3D0;text-transform:uppercase;margin-bottom:18px;
+}
+.eyebrow i{width:16px;height:16px;}
+.hero-content h1{
+  font-size:clamp(34px,6vw,64px);font-weight:800;letter-spacing:-.01em;margin-bottom:18px;
+  text-shadow:0 4px 30px rgba(0,0,0,.25);
+}
+.hero-sub{font-size:clamp(15px,2vw,19px);color:rgba(255,255,255,.9);max-width:640px;margin:0 auto 36px;}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+.hero-dots{position:absolute;bottom:38px;left:50%;transform:translateX(-50%);z-index:2;display:flex;gap:10px;}
+.hero-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);transition:all var(--transition);}
+.hero-dot.active{background:#fff;width:28px;border-radius:6px;}
+.scroll-cue{
+  position:absolute;bottom:36px;right:36px;z-index:2;color:#fff;width:44px;height:44px;
+  border:1.5px solid rgba(255,255,255,.5);border-radius:50%;display:flex;align-items:center;justify-content:center;
+  animation:bounceY 2s infinite;
+}
+@keyframes bounceY{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+
+/* ==========================================================
+   QUICK ACCESS
+   ========================================================== */
+.quick-access{padding:0;margin-top:-58px;position:relative;z-index:5;}
+.quick-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  background:var(--white);padding:26px;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);
+}
+.quick-card{
+  display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;
+  padding:24px 12px;border-radius:var(--radius-md);background:var(--gray-soft);
+  font-weight:700;font-size:14px;color:var(--ink);transition:all var(--transition);
+  border:1px solid transparent;
+}
+.quick-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--blue);}
+.quick-icon{
+  width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+  background:var(--gradient-main);color:#fff;
+}
+.quick-icon i{width:26px;height:26px;}
+.quick-emergency .quick-icon{background:linear-gradient(135deg,#F87171,#EF4444);}
+.quick-emergency:hover{border-color:var(--danger);}
+
+/* ==========================================================
+   STATS
+   ========================================================== */
+.stats{background:var(--gray-soft);}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
+.stat-item{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.stat-item i{width:32px;height:32px;color:var(--green);margin-bottom:6px;}
+.stat-number{font-family:var(--font-display);font-size:clamp(30px,4vw,44px);font-weight:800;color:var(--blue);}
+.stat-item p{color:var(--ink-soft);font-weight:600;font-size:14.5px;}
+
+/* ==========================================================
+   PROFILE
+   ========================================================== */
+.profile-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;}
+.profile-text p{color:var(--ink-soft);margin:16px 0 22px;}
+.profile-points li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;color:var(--ink-soft);font-size:14.5px;}
+.profile-points i{width:18px;height:18px;color:var(--green);flex-shrink:0;margin-top:2px;}
+
+.vm-cards{display:flex;flex-direction:column;gap:20px;}
+.vm-card{
+  padding:30px;border-radius:var(--radius-md);background:var(--gradient-soft);
+  border:1px solid var(--border);box-shadow:var(--shadow-sm);
+}
+.vm-card i{width:30px;height:30px;color:var(--blue);margin-bottom:10px;}
+.vm-card h3{margin-bottom:8px;}
+.vm-card p{color:var(--ink-soft);font-style:italic;font-size:14.5px;}
+.vm-alt i{color:var(--green);}
+
+/* ==========================================================
+   SERVICES
+   ========================================================== */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.service-card{
+  padding:34px 20px;text-align:center;border-radius:var(--radius-md);background:var(--white);
+  border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all var(--transition);
+}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--green);}
+.service-card i{width:34px;height:34px;color:var(--green);margin-bottom:14px;}
+.service-card h4{font-size:15.5px;font-weight:700;}
+
+/* ==========================================================
+   ONLINE SERVICES
+   ========================================================== */
+.online-services{background:var(--ink);color:#fff;}
+.online-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.online-card{
+  padding:30px;border-radius:var(--radius-md);background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);transition:all var(--transition);
+}
+.online-card:hover{background:rgba(255,255,255,.1);transform:translateY(-6px);}
+.online-card i{width:30px;height:30px;color:#5EEAD4;margin-bottom:14px;}
+.online-card h4{color:#fff;margin-bottom:8px;}
+.online-card p{color:rgba(255,255,255,.65);font-size:13.5px;margin-bottom:16px;}
+.card-link{display:flex;align-items:center;gap:6px;font-weight:700;font-size:13.5px;color:#5EEAD4;}
+.card-link i{width:14px;height:14px;}
+
+/* ==========================================================
+   INFO + VIDEO
+   ========================================================== */
+.info-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;}
+.video-frame{border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:16/9;margin-top:18px;}
+.video-frame iframe{width:100%;height:100%;border:0;}
+.info-sidebar{background:var(--gray-soft);border-radius:var(--radius-md);padding:30px;}
+.info-list li{
+  display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);
+  font-weight:600;font-size:14.5px;color:var(--ink-soft);
+}
+.info-list li:last-child{border-bottom:none;}
+.info-list i{width:18px;height:18px;color:var(--blue);flex-shrink:0;}
+
+/* ==========================================================
+   GALLERY
+   ========================================================== */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;gap:14px;
+}
+.gallery-item{
+  position:relative;overflow:hidden;border-radius:var(--radius-sm);cursor:pointer;background:var(--gray-soft);
+}
+.gallery-item:nth-child(5n+1){grid-row:span 2;}
+.gallery-item img{
+  width:100%;height:100%;object-fit:cover;transition:transform .5s ease;
+}
+.gallery-item:hover img{transform:scale(1.08);}
+.gallery-item::after{
+  content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(15,23,42,.55));
+  opacity:0;transition:opacity var(--transition);
+}
+.gallery-item:hover::after{opacity:1;}
+
+.lightbox{
+  position:fixed;inset:0;background:rgba(2,8,20,.92);z-index:2000;
+  display:none;align-items:center;justify-content:center;
+}
+.lightbox.open{display:flex;}
+.lightbox img{max-width:88vw;max-height:84vh;border-radius:10px;}
+.lightbox-close,.lightbox-prev,.lightbox-next{
+  position:absolute;color:#fff;width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;
+}
+.lightbox-close{top:24px;right:24px;}
+.lightbox-prev{left:24px;top:50%;transform:translateY(-50%);}
+.lightbox-next{right:24px;top:50%;transform:translateY(-50%);}
+
+/* ==========================================================
+   SOCIAL
+   ========================================================== */
+.social-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+.social-card{
+  display:flex;flex-direction:column;align-items:center;gap:10px;padding:26px 10px;
+  border-radius:var(--radius-md);background:var(--gray-soft);font-weight:700;font-size:13.5px;
+  transition:all var(--transition);
+}
+.social-card i{width:26px;height:26px;color:var(--blue);}
+.social-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);background:var(--white);border:1px solid var(--blue);}
+
+/* ==========================================================
+   FEEDBACK
+   ========================================================== */
+.feedback-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.feedback-card{
+  display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:30px 16px;
+  border-radius:var(--radius-md);background:var(--white);border:1px solid var(--border);box-shadow:var(--shadow-sm);
+  font-weight:700;font-size:14px;transition:all var(--transition);
+}
+.feedback-card i{width:28px;height:28px;color:var(--green);}
+.feedback-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--green);}
+
+/* ==========================================================
+   ZONA INTEGRITAS
+   ========================================================== */
+.integrity-section{
+  background:linear-gradient(135deg,#0B3A55 0%, #064E3B 100%);color:#fff;overflow:hidden;
+}
+.slogan{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:.08em;color:#A7F3D0;margin-top:14px;}
+.integrity-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;z-index:2;}
+.integrity-card{
+  display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:30px 14px;
+  border-radius:var(--radius-md);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  font-weight:700;font-size:14px;transition:all var(--transition);
+}
+.integrity-card i{width:28px;height:28px;color:#A7F3D0;}
+.integrity-card:hover{background:rgba(255,255,255,.16);transform:translateY(-6px);}
+
+/* ==========================================================
+   TESTIMONIALS
+   ========================================================== */
+.testimonial-slider{position:relative;overflow:hidden;}
+.testimonial-track{display:flex;transition:transform .5s ease;}
+.testimonial-card{
+  flex:0 0 100%;max-width:680px;margin:0 auto;padding:40px;text-align:center;
+  background:var(--gray-soft);border-radius:var(--radius-lg);
+}
+.testimonial-card img{width:64px;height:64px;border-radius:50%;margin:0 auto 16px;object-fit:cover;}
+.testimonial-card p{color:var(--ink-soft);font-style:italic;font-size:15.5px;margin-bottom:16px;}
+.testimonial-card .stars{color:#FBBF24;margin-bottom:10px;font-size:14px;}
+.testimonial-card h5{font-weight:700;}
+.testimonial-card span{font-size:13px;color:var(--ink-soft);}
+.testimonial-dots{display:flex;justify-content:center;gap:8px;margin-top:24px;}
+.testimonial-dots span{width:9px;height:9px;border-radius:50%;background:var(--border);cursor:pointer;transition:all var(--transition);}
+.testimonial-dots span.active{background:var(--blue);width:24px;border-radius:5px;}
+
+/* ==========================================================
+   FAQ
+   ========================================================== */
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;background:var(--white);}
+.faq-question{
+  display:flex;justify-content:space-between;align-items:center;width:100%;padding:20px 22px;
+  font-weight:700;font-size:15px;text-align:left;
+}
+.faq-question i{width:18px;height:18px;flex-shrink:0;transition:transform var(--transition);color:var(--blue);}
+.faq-item.open .faq-question i{transform:rotate(180deg);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height var(--transition);}
+.faq-answer p{padding:0 22px 20px;color:var(--ink-soft);font-size:14.5px;}
+
+/* ==========================================================
+   MAP
+   ========================================================== */
+.map-frame{width:100%;height:420px;}
+.map-frame iframe{width:100%;height:100%;border:0;}
+
+/* ==========================================================
+   CONTACT
+   ========================================================== */
+.contact-section{background:var(--gray-soft);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+.contact-list li{display:flex;gap:12px;align-items:flex-start;margin:18px 0;color:var(--ink-soft);font-size:14.5px;}
+.contact-list i{width:18px;height:18px;color:var(--blue);flex-shrink:0;margin-top:2px;}
+.contact-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;}
+.contact-form{background:var(--white);padding:36px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);}
+.contact-form h3{margin-bottom:20px;}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius-sm);
+  margin-bottom:14px;font-family:inherit;font-size:14.5px;background:var(--white);color:var(--ink);resize:vertical;
+}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--blue);}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.75);padding:70px 0 0;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px;}
+.footer-brand img{width:48px;height:48px;border-radius:12px;margin-bottom:14px;}
+.footer-brand h4{color:#fff;margin-bottom:8px;}
+.footer-col h5{color:#fff;margin-bottom:16px;font-size:15px;}
+.footer-col a, .footer-col p{display:block;margin-bottom:10px;font-size:14px;color:rgba(255,255,255,.65);}
+.footer-col a:hover{color:#5EEAD4;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;text-align:center;font-size:13.5px;}
+
+/* ==========================================================
+   FLOATING BUTTONS
+   ========================================================== */
+.float-btn{
+  position:fixed;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#fff;box-shadow:var(--shadow-md);z-index:900;transition:all var(--transition);
+}
+.float-btn i{width:26px;height:26px;}
+.float-wa{right:24px;bottom:24px;background:#25D366;}
+.float-emergency{right:24px;bottom:92px;background:var(--danger);animation:pulseRing 2s infinite;}
+.back-to-top{
+  right:24px;bottom:160px;background:var(--ink);opacity:0;pointer-events:none;transform:translateY(10px);
+}
+.back-to-top.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+.float-btn:hover{transform:scale(1.08);}
+@keyframes pulseRing{
+  0%{box-shadow:0 0 0 0 rgba(239,68,68,.55), var(--shadow-md);}
+  70%{box-shadow:0 0 0 14px rgba(239,68,68,0), var(--shadow-md);}
+  100%{box-shadow:0 0 0 0 rgba(239,68,68,0), var(--shadow-md);}
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width:1024px){
+  .main-nav{display:none;}
+  .nav-toggle{display:flex;}
+  .quick-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:36px;}
+  .profile-grid,.info-grid,.contact-grid{grid-template-columns:1fr;gap:36px;}
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .online-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:repeat(3,1fr);}
+  .social-grid{grid-template-columns:repeat(3,1fr);}
+  .feedback-grid,.integrity-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width:640px){
+  section{padding:60px 0;}
+  .quick-grid{grid-template-columns:repeat(2,1fr);gap:12px;padding:18px;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px;}
+  .social-grid{grid-template-columns:repeat(2,1fr);}
+  .feedback-grid,.integrity-grid{grid-template-columns:1fr;}
+  .hero-content h1{font-size:32px;}
+  .footer-grid{grid-template-columns:1fr;text-align:center;}
+  .contact-btns{justify-content:center;}
+  .header-cta{display:none;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ======================================================
+     LOADING SCREEN
+====================================================== -->
+<div id="loading-screen" aria-hidden="true">
+  <div class="pulse-wrap">
+    <svg viewBox="0 0 200 60" class="pulse-line">
+      <polyline points="0,30 40,30 55,10 70,50 85,30 200,30" />
+    </svg>
+    <span class="loading-text">UPT Puskesmas Mentikan</span>
+  </div>
+</div>
+
+<!-- ======================================================
+     HEADER / NAVBAR
+====================================================== -->
+<header id="site-header" class="site-header">
+  <div class="container header-inner">
+    <a href="#beranda" class="brand">
+      <img id="logo-img" src="" alt="Logo UPT Puskesmas Mentikan" class="brand-logo" data-config="LOGO">
+      <span class="brand-text">
+        <strong>UPT Puskesmas Mentikan</strong>
+        <small>Melayani dengan Profesional, Cepat, Ramah &amp; Berkualitas</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#beranda">Beranda</a>
+      <a href="#profil">Profil</a>
+      <a href="#pelayanan">Pelayanan</a>
+      <a href="#informasi">Informasi</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#zona-integritas">Zona Integritas</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="dark-toggle" class="icon-btn" aria-label="Mode Gelap" title="Mode Gelap">
+        <i data-lucide="moon"></i>
+      </button>
+      <a href="#kontak" class="btn btn-primary btn-sm header-cta">Hubungi Kami</a>
+      <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Buka Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav drawer -->
+<div id="mobile-nav" class="mobile-nav">
+  <a href="#beranda">Beranda</a>
+  <a href="#profil">Profil</a>
+  <a href="#pelayanan">Pelayanan</a>
+  <a href="#informasi">Informasi</a>
+  <a href="#galeri">Galeri</a>
+  <a href="#zona-integritas">Zona Integritas</a>
+  <a href="#kontak">Kontak</a>
+  <a href="#kontak" class="btn btn-primary btn-block">Hubungi Kami</a>
+</div>
+
+<main>
+
+<!-- ======================================================
+     HERO SECTION (Banner Slideshow)
+====================================================== -->
+<section id="beranda" class="hero">
+  <div id="hero-slider" class="hero-slider" aria-roledescription="carousel"></div>
+  <div class="hero-overlay"></div>
+  <div class="medical-pattern" aria-hidden="true"></div>
+
+  <div class="container hero-content reveal">
+    <p class="eyebrow"><i data-lucide="plus-circle"></i> Selamat Datang Di</p>
+    <h1>UPT PUSKESMAS MENTIKAN</h1>
+    <p class="hero-sub">Melayani Kesehatan Masyarakat Kota Mojokerto dengan Pelayanan Terbaik</p>
+    <div class="hero-btns">
+      <a href="#pelayanan-online" class="btn btn-primary">Layanan Online <i data-lucide="arrow-right"></i></a>
+      <a href="#profil" class="btn btn-ghost">Profil Puskesmas</a>
+    </div>
+  </div>
+
+  <div class="hero-dots" id="hero-dots"></div>
+  <button class="scroll-cue" aria-label="Gulir ke bawah"><i data-lucide="chevron-down"></i></button>
+</section>
+
+<!-- ======================================================
+     QUICK ACCESS MENU
+====================================================== -->
+<section class="quick-access">
+  <div class="container">
+    <div class="quick-grid reveal">
+      <a class="quick-card" data-config-link="RESERVASI_POLI" target="_blank" rel="noopener">
+        <span class="quick-icon"><i data-lucide="calendar-check"></i></span>
+        <span>Reservasi Poli Rahayu</span>
+      </a>
+      <a class="quick-card" data-config-link="SKRINING_ILP" target="_blank" rel="noopener">
+        <span class="quick-icon"><i data-lucide="clipboard-pulse"></i></span>
+        <span>Skrining ILP Puskesmas</span>
+      </a>
+      <a class="quick-card" data-config-link="SKRINING_BPJS" target="_blank" rel="noopener">
+        <span class="quick-icon"><i data-lucide="shield-check"></i></span>
+        <span>Skrining Mandiri BPJS</span>
+      </a>
+      <a class="quick-card quick-emergency" data-config-link="EMERGENCY" target="_blank" rel="noopener">
+        <span class="quick-icon"><i data-lucide="siren"></i></span>
+        <span>Emergency Call</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     STATISTIK PELAYANAN
+====================================================== -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <i data-lucide="users"></i>
+        <span class="stat-number" data-target="12500" data-config="STAT_KUNJUNGAN">0</span>
+        <p>Jumlah Kunjungan</p>
+      </div>
+      <div class="stat-item reveal">
+        <i data-lucide="home"></i>
+        <span class="stat-number" data-target="24" data-config="STAT_POSYANDU">0</span>
+        <p>Jumlah Posyandu</p>
+      </div>
+      <div class="stat-item reveal">
+        <i data-lucide="list-checks"></i>
+        <span class="stat-number" data-target="18" data-config="STAT_PROGRAM">0</span>
+        <p>Jumlah Program</p>
+      </div>
+      <div class="stat-item reveal">
+        <i data-lucide="stethoscope"></i>
+        <span class="stat-number" data-target="45" data-config="STAT_NAKES">0</span>
+        <p>Tenaga Kesehatan</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     PROFIL PUSKESMAS
+====================================================== -->
+<section id="profil" class="profile-section">
+  <div class="container profile-grid">
+    <div class="profile-text reveal">
+      <span class="section-tag">Profil Kami</span>
+      <h2>UPT Puskesmas Mentikan</h2>
+      <p>UPT Puskesmas Mentikan merupakan salah satu unit pelayanan kesehatan non rawat inap yang terletak di Jl. Prapanca No. 55, Kelurahan Mentikan, Kecamatan Prajurit Kulon, Kota Mojokerto. Kami berkomitmen memberikan pelayanan kesehatan dasar yang profesional, cepat, ramah, dan berkualitas bagi seluruh masyarakat.</p>
+      <ul class="profile-points">
+        <li><i data-lucide="map-pin"></i> Jl. Prapanca No. 55, Mentikan, Prajurit Kulon, Kota Mojokerto</li>
+        <li><i data-lucide="badge-check"></i> Puskesmas Non Rawat Inap</li>
+        <li><i data-lucide="heart-pulse"></i> Pelayanan Kesehatan Dasar Masyarakat</li>
+      </ul>
+    </div>
+
+    <div class="vm-cards reveal">
+      <div class="vm-card">
+        <i data-lucide="eye"></i>
+        <h3>Visi</h3>
+        <p>"Mewujudkan Kota Mojokerto yang Berdaya Saing, Mandiri, Demokratis, Adil Makmur, Sejahtera dan Bermartabat"</p>
+      </div>
+      <div class="vm-card vm-alt">
+        <i data-lucide="target"></i>
+        <h3>Misi</h3>
+        <p>"Mewujudkan Sumber Daya Manusia Berkualitas melalui Peningkatan Akses, Kualitas Pendidikan, dan Pelayanan Kesehatan"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     LAYANAN PUSKESMAS
+====================================================== -->
+<section id="pelayanan" class="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Layanan Kami</span>
+      <h2>Layanan Puskesmas</h2>
+      <p>Beragam layanan kesehatan dasar untuk memenuhi kebutuhan masyarakat.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card"><i data-lucide="stethoscope"></i><h4>Poli Umum</h4></div>
+      <div class="service-card"><i data-lucide="smile"></i><h4>Poli Gigi</h4></div>
+      <div class="service-card"><i data-lucide="baby"></i><h4>KIA dan KB</h4></div>
+      <div class="service-card"><i data-lucide="syringe"></i><h4>Imunisasi</h4></div>
+      <div class="service-card"><i data-lucide="users-round"></i><h4>Posyandu</h4></div>
+      <div class="service-card"><i data-lucide="activity"></i><h4>PTM</h4></div>
+      <div class="service-card"><i data-lucide="heart-handshake"></i><h4>Lansia</h4></div>
+      <div class="service-card"><i data-lucide="flask-conical"></i><h4>Laboratorium</h4></div>
+      <div class="service-card"><i data-lucide="pill"></i><h4>Farmasi</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     PELAYANAN ONLINE
+====================================================== -->
+<section id="pelayanan-online" class="online-services">
+  <div class="container">
+    <div class="section-head reveal light">
+      <span class="section-tag">Digital Service</span>
+      <h2>Pelayanan Online</h2>
+      <p>Akses layanan puskesmas kapan saja, di mana saja.</p>
+    </div>
+    <div class="online-grid reveal">
+      <a class="online-card" data-config-link="DAFTAR_ONLINE" target="_blank" rel="noopener">
+        <i data-lucide="calendar-plus"></i>
+        <h4>Daftar Online H-1</h4>
+        <p>Daftar antrian sehari sebelum berobat</p>
+        <span class="card-link">Akses Sekarang <i data-lucide="arrow-up-right"></i></span>
+      </a>
+      <a class="online-card" data-config-link="SULTAN_MENTIKAN" target="_blank" rel="noopener">
+        <i data-lucide="message-circle-heart"></i>
+        <h4>Konsultasi Online (Sultan Mentikan)</h4>
+        <p>Konsultasi kesehatan bersama tenaga medis</p>
+        <span class="card-link">Akses Sekarang <i data-lucide="arrow-up-right"></i></span>
+      </a>
+      <a class="online-card" data-config-link="CEK_TARIF" target="_blank" rel="noopener">
+        <i data-lucide="receipt"></i>
+        <h4>Cek Tarif Layanan</h4>
+        <p>Informasi biaya layanan secara transparan</p>
+        <span class="card-link">Akses Sekarang <i data-lucide="arrow-up-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     INFORMASI & VIDEO PROFIL
+====================================================== -->
+<section id="informasi" class="info-section">
+  <div class="container info-grid">
+    <div class="video-wrap reveal">
+      <span class="section-tag">Video Profil</span>
+      <h2>Mengenal UPT Puskesmas Mentikan</h2>
+      <div class="video-frame">
+        <iframe id="profile-video" loading="lazy" title="Video Profil Puskesmas Mentikan"
+          src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <aside class="info-sidebar reveal">
+      <span class="section-tag">Informasi Penting</span>
+      <h2>Jadwal &amp; Informasi</h2>
+      <ul class="info-list">
+        <li><i data-lucide="clock"></i> Jadwal Pelayanan</li>
+        <li><i data-lucide="clock-4"></i> Jam Operasional</li>
+        <li><i data-lucide="home"></i> Informasi Posyandu</li>
+        <li><i data-lucide="activity"></i> Program ILP</li>
+        <li><i data-lucide="heart-pulse"></i> Program PTM</li>
+        <li><i data-lucide="baby"></i> Program KIA</li>
+        <li><i data-lucide="user-round"></i> Program Lansia</li>
+        <li><i data-lucide="syringe"></i> Informasi Imunisasi</li>
+        <li><i data-lucide="megaphone"></i> Pengumuman</li>
+        <li><i data-lucide="newspaper"></i> Berita Kesehatan</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ======================================================
+     GALERI KEGIATAN
+====================================================== -->
+<section id="galeri" class="gallery-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Dokumentasi</span>
+      <h2>Galeri Kegiatan</h2>
+      <p>Momen kegiatan pelayanan dan program kesehatan masyarakat.</p>
+    </div>
+    <div id="gallery-grid" class="gallery-grid reveal"></div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-close" aria-label="Tutup"><i data-lucide="x"></i></button>
+  <button class="lightbox-prev" aria-label="Sebelumnya"><i data-lucide="chevron-left"></i></button>
+  <img id="lightbox-img" src="" alt="Galeri kegiatan">
+  <button class="lightbox-next" aria-label="Berikutnya"><i data-lucide="chevron-right"></i></button>
+</div>
+
+<!-- ======================================================
+     MEDIA SOSIAL
+====================================================== -->
+<section class="social-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Terhubung Dengan Kami</span>
+      <h2>Media Sosial</h2>
+      <p>@puskesmasmentikan</p>
+    </div>
+    <div class="social-grid reveal">
+      <a class="social-card" data-config-link="FACEBOOK" target="_blank" rel="noopener"><i data-lucide="facebook"></i><span>Facebook</span></a>
+      <a class="social-card" data-config-link="INSTAGRAM" target="_blank" rel="noopener"><i data-lucide="instagram"></i><span>Instagram</span></a>
+      <a class="social-card" data-config-link="TIKTOK" target="_blank" rel="noopener"><i data-lucide="music-2"></i><span>TikTok</span></a>
+      <a class="social-card" data-config-link="YOUTUBE_CHANNEL" target="_blank" rel="noopener"><i data-lucide="youtube"></i><span>YouTube</span></a>
+      <a class="social-card" data-config-link="WHATSAPP_LINK" target="_blank" rel="noopener"><i data-lucide="message-circle"></i><span>WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FEEDBACK / SUARA MASYARAKAT
+====================================================== -->
+<section class="feedback-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Partisipasi Publik</span>
+      <h2>Suara Masyarakat</h2>
+    </div>
+    <div class="feedback-grid reveal">
+      <a class="feedback-card" data-config-link="CURHAT_NING_ITA" target="_blank" rel="noopener"><i data-lucide="heart-handshake"></i><span>Curhat Ning Ita</span></a>
+      <a class="feedback-card" data-config-link="SUKMA" target="_blank" rel="noopener"><i data-lucide="smile-plus"></i><span>Sukma (Survey Kepuasan)</span></a>
+      <a class="feedback-card" data-config-link="KRITIK_SARAN" target="_blank" rel="noopener"><i data-lucide="message-square-text"></i><span>Kritik dan Saran</span></a>
+      <a class="feedback-card" data-config-link="PENGADUAN" target="_blank" rel="noopener"><i data-lucide="flag"></i><span>Pengaduan</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     ZONA INTEGRITAS
+====================================================== -->
+<section id="zona-integritas" class="integrity-section">
+  <div class="medical-pattern dark" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-head reveal light">
+      <span class="section-tag">Komitmen Anti Korupsi</span>
+      <h2>ZONA INTEGRITAS</h2>
+      <p>Dukung Kami Menuju Wilayah Bebas Korupsi (WBK) dan Wilayah Birokrasi Bersih dan Melayani (WBBM)</p>
+      <p class="slogan">Lihat &bull; Lawan &bull; Laporkan</p>
+    </div>
+    <div class="integrity-grid reveal">
+      <a class="integrity-card" data-config-link="SPK" target="_blank" rel="noopener"><i data-lucide="bar-chart-3"></i><span>Survey Persepsi Korupsi</span></a>
+      <a class="integrity-card" data-config-link="LAPOR_KORUPSI" target="_blank" rel="noopener"><i data-lucide="alert-triangle"></i><span>Lapor Dugaan Korupsi Puskesmas</span></a>
+      <a class="integrity-card" data-config-link="LAPOR_GRATIFIKASI" target="_blank" rel="noopener"><i data-lucide="gift"></i><span>Lapor Gratifikasi Puskesmas</span></a>
+      <a class="integrity-card" data-config-link="LAPOR_KOTA" target="_blank" rel="noopener"><i data-lucide="building-2"></i><span>Lapor Dugaan Korupsi Kota Mojokerto</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     TESTIMONI
+====================================================== -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Apa Kata Mereka</span>
+      <h2>Testimoni Pengguna</h2>
+    </div>
+    <div class="testimonial-slider reveal" id="testimonial-slider">
+      <div class="testimonial-track" id="testimonial-track"></div>
+      <div class="testimonial-dots" id="testimonial-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FAQ
+====================================================== -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Pertanyaan Umum</span>
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq-list reveal" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- ======================================================
+     PETA LOKASI
+====================================================== -->
+<section class="map-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Lokasi Kami</span>
+      <h2>Peta Lokasi</h2>
+    </div>
+  </div>
+  <div class="map-frame reveal">
+    <iframe id="maps-embed" loading="lazy" title="Lokasi UPT Puskesmas Mentikan" src="" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- ======================================================
+     CONTACT US
+====================================================== -->
+<section id="kontak" class="contact-section">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <span class="section-tag">Hubungi Kami</span>
+      <h2>Contact Us</h2>
+      <ul class="contact-list">
+        <li><i data-lucide="map-pin"></i> Jl. Prapanca No. 55, Mentikan, Prajurit Kulon, Kota Mojokerto</li>
+        <li><i data-lucide="phone"></i> <span id="contact-phone" data-config="TELEPON">(0321) 000000</span></li>
+        <li><i data-lucide="mail"></i> <span id="contact-email" data-config="EMAIL">info@puskesmasmentikan.id</span></li>
+        <li><i data-lucide="clock"></i> <span id="contact-jam" data-config="JAM_OPERASIONAL">Senin–Sabtu, 07.30–14.00 WIB</span></li>
+      </ul>
+      <div class="contact-btns">
+        <a class="btn btn-primary" id="contact-wa-btn" data-config-link="WHATSAPP_LINK" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp</a>
+        <a class="btn btn-outline" id="contact-tel-btn" href="#"><i data-lucide="phone"></i> Telepon</a>
+        <a class="btn btn-outline" id="contact-email-btn" href="#"><i data-lucide="mail"></i> Email</a>
+      </div>
+    </div>
+    <form class="contact-form reveal" id="contact-form" onsubmit="return false;">
+      <h3>Kirim Pesan</h3>
+      <input type="text" placeholder="Nama Lengkap" required>
+      <input type="text" placeholder="Nomor WhatsApp" required>
+      <textarea rows="4" placeholder="Pesan Anda" required></textarea>
+      <button type="submit" class="btn btn-primary btn-block">Kirim via WhatsApp <i data-lucide="send"></i></button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img id="footer-logo" src="" alt="Logo UPT Puskesmas Mentikan" data-config="LOGO">
+      <h4>UPT Puskesmas Mentikan</h4>
+      <p>Melayani dengan Profesional, Cepat, Ramah, dan Berkualitas.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Link</h5>
+      <a href="#beranda">Beranda</a>
+      <a href="#profil">Profil</a>
+      <a href="#pelayanan">Pelayanan</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+    <div class="footer-col">
+      <h5>Media Sosial</h5>
+      <a data-config-link="FACEBOOK" target="_blank" rel="noopener">Facebook</a>
+      <a data-config-link="INSTAGRAM" target="_blank" rel="noopener">Instagram</a>
+      <a data-config-link="TIKTOK" target="_blank" rel="noopener">TikTok</a>
+      <a data-config-link="YOUTUBE_CHANNEL" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <div class="footer-col">
+      <h5>Alamat</h5>
+      <p>Jl. Prapanca No. 55, Mentikan,<br>Prajurit Kulon, Kota Mojokerto</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 UPT Puskesmas Mentikan. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ======================================================
+     FLOATING BUTTONS
+====================================================== -->
+<a id="float-wa" class="float-btn float-wa" data-config-link="WHATSAPP_LINK" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i data-lucide="message-circle"></i>
+</a>
+<a id="float-emergency" class="float-btn float-emergency" data-config-link="EMERGENCY" target="_blank" rel="noopener" aria-label="Emergency Call">
+  <i data-lucide="siren"></i>
+</a>
+<button id="back-to-top" class="float-btn back-to-top" aria-label="Kembali ke atas">
+  <i data-lucide="arrow-up"></i>
+</button>
+
+<script>
+
+------------------------------------------------------------- */
+const SPREADSHEET_ID = "1xfHCmW3eGi831fIXJN9ZDWsakbbDhh5gSAIDRpyRvxA";
+const SHEET_NAME = "SETTING";
+const GVIZ_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(SHEET_NAME)}`;
+const LOCAL_CACHE_KEY = "puskesmas_mentikan_settings";
+
+/* ----------------------------------------------------------
+   2. NILAI DEFAULT (dipakai jika spreadsheet & cache kosong)
+------------------------------------------------------------- */
+const DEFAULT_SETTINGS = {
+  LOGO: "https://placehold.co/120x120/0EA5E9/FFFFFF?text=Logo",
+  BANNER1: "https://placehold.co/1600x900/0EA5E9/FFFFFF?text=Banner+1",
+  BANNER2: "https://placehold.co/1600x900/10B981/FFFFFF?text=Banner+2",
+  BANNER3: "https://placehold.co/1600x900/0284C7/FFFFFF?text=Banner+3",
+  BANNER4: "https://placehold.co/1600x900/059669/FFFFFF?text=Banner+4",
+
+  YOUTUBE: "https://www.youtube.com/watch?v=WfBwjRqby2w&t=7s",
+
+  FACEBOOK: "https://facebook.com/puskesmasmentikan",
+  INSTAGRAM: "https://instagram.com/puskesmasmentikan",
+  TIKTOK: "https://tiktok.com/@puskesmasmentikan",
+  YOUTUBE_CHANNEL: "https://youtube.com/@puskesmasmentikan",
+  WHATSAPP: "081334555521",
+
+  RESERVASI_POLI: "#",
+  SKRINING_ILP: "#",
+  SKRINING_BPJS: "#",
+  EMERGENCY: "#",
+
+  DAFTAR_ONLINE: "#",
+  SULTAN_MENTIKAN: "#",
+  CEK_TARIF: "#",
+
+  CURHAT_NING_ITA: "#",
+  SUKMA: "#",
+  KRITIK_SARAN: "#",
+  PENGADUAN: "#",
+
+  SPK: "#",
+  LAPOR_KORUPSI: "#",
+  LAPOR_GRATIFIKASI: "#",
+  LAPOR_KOTA: "#",
+
+  MAPS: "https://www.google.com/maps?q=Jl.+Prapanca+No.55+Mentikan+Kota+Mojokerto&output=embed",
+
+  TELEPON: "(0321) 000000",
+  EMAIL: "info@puskesmasmentikan.id",
+  JAM_OPERASIONAL: "Senin–Sabtu, 07.30–14.00 WIB",
+
+  STAT_KUNJUNGAN: "12500",
+  STAT_POSYANDU: "24",
+  STAT_PROGRAM: "18",
+  STAT_NAKES: "45",
+};
+// Tambahkan GALERI1 .. GALERI20 default placeholder
+for (let i = 1; i <= 20; i++) {
+  DEFAULT_SETTINGS[`GALERI${i}`] = `https://placehold.co/500x500/F8FAFC/0EA5E9?text=Galeri+${i}`;
+}
+
+let SETTINGS = { ...DEFAULT_SETTINGS };
+
+/* ----------------------------------------------------------
+   3. AMBIL DATA DARI GOOGLE SPREADSHEET (GViz JSON)
+------------------------------------------------------------- */
+async function loadSettings() {
+  try {
+    if (SPREADSHEET_ID && !SPREADSHEET_ID.startsWith("GANTI_")) {
+      const res = await fetch(GVIZ_URL);
+      const text = await res.text();
+      const json = JSON.parse(text.substring(text.indexOf("{"), text.lastIndexOf("}") + 1));
+      const rows = json.table.rows || [];
+      const fetched = {};
+      rows.forEach((row) => {
+        const cells = row.c || [];
+        const key = cells[0] && cells[0].v ? String(cells[0].v).trim() : null;
+        const value = cells[1] && cells[1].v !== null ? String(cells[1].v).trim() : "";
+        if (key) fetched[key] = value;
+      });
+      if (Object.keys(fetched).length > 0) {
+        SETTINGS = { ...DEFAULT_SETTINGS, ...fetched };
+        localStorage.setItem(LOCAL_CACHE_KEY, JSON.stringify(SETTINGS));
+        return;
+      }
+    }
+    throw new Error("Spreadsheet belum dikonfigurasi atau kosong");
+  } catch (err) {
+    // Fallback 1: localStorage cache
+    const cached = localStorage.getItem(LOCAL_CACHE_KEY);
+    if (cached) {
+      SETTINGS = { ...DEFAULT_SETTINGS, ...JSON.parse(cached) };
+    } else {
+      SETTINGS = { ...DEFAULT_SETTINGS };
+    }
+    console.warn("[Puskesmas Mentikan] Memakai data cadangan:", err.message);
+  }
+}
+
+/* ----------------------------------------------------------
+   4. UTIL: ubah link YouTube watch -> embed
+------------------------------------------------------------- */
+function toYoutubeEmbed(url) {
+  if (!url) return "";
+  const m = url.match(/(?:v=|youtu\.be\/)([\w-]{11})/);
+  return m ? `https://www.youtube.com/embed/${m[1]}` : url;
+}
+function toWhatsappLink(number) {
+  if (!number) return "#";
+  const digits = number.replace(/\D/g, "");
+  const normalized = digits.startsWith("0") ? "62" + digits.slice(1) : digits;
+  return `https://wa.me/${normalized}`;
+}
+
+/* ----------------------------------------------------------
+   5. TERAPKAN SETTINGS KE DOM
+------------------------------------------------------------- */
+function applySettings() {
+  SETTINGS.WHATSAPP_LINK = toWhatsappLink(SETTINGS.WHATSAPP);
+
+  // Elemen dengan data-config (text / src)
+  document.querySelectorAll("[data-config]").forEach((el) => {
+    const key = el.dataset.config;
+    const val = SETTINGS[key];
+    if (val === undefined) return;
+    if (el.tagName === "IMG") el.src = val;
+    else el.textContent = val;
+  });
+
+  // Elemen dengan data-config-link (href)
+  document.querySelectorAll("[data-config-link]").forEach((el) => {
+    const key = el.dataset.configLink;
+    const val = SETTINGS[key];
+    if (val) el.href = val;
+  });
+
+  // Tombol telepon & email khusus (perlu prefix)
+  const telBtn = document.getElementById("contact-tel-btn");
+  if (telBtn) telBtn.href = `tel:${SETTINGS.TELEPON.replace(/\D/g, "")}`;
+  const mailBtn = document.getElementById("contact-email-btn");
+  if (mailBtn) mailBtn.href = `mailto:${SETTINGS.EMAIL}`;
+
+  // Video profil
+  const video = document.getElementById("profile-video");
+  if (video) video.src = toYoutubeEmbed(SETTINGS.YOUTUBE);
+
+  // Maps embed
+  const maps = document.getElementById("maps-embed");
+  if (maps) maps.src = SETTINGS.MAPS;
+
+  // Form WA submit
+  const form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", () => {
+      const inputs = form.querySelectorAll("input,textarea");
+      const nama = inputs[0].value, nomor = inputs[1].value, pesan = inputs[2].value;
+      const text = encodeURIComponent(`Halo, saya ${nama} (${nomor}).\n${pesan}`);
+      window.open(`${SETTINGS.WHATSAPP_LINK}?text=${text}`, "_blank");
+    });
+  }
+
+  buildHeroSlider();
+  buildGallery();
+  buildStats();
+}
+
+/* ----------------------------------------------------------
+   6. HERO SLIDER (Auto Slide, Fade, Dots, Swipe)
+------------------------------------------------------------- */
+function buildHeroSlider() {
+  const slider = document.getElementById("hero-slider");
+  const dotsWrap = document.getElementById("hero-dots");
+  slider.innerHTML = "";
+  dotsWrap.innerHTML = "";
+
+  const banners = [SETTINGS.BANNER1, SETTINGS.BANNER2, SETTINGS.BANNER3, SETTINGS.BANNER4].filter(Boolean);
+  let current = 0;
+
+  banners.forEach((src, i) => {
+    const div = document.createElement("div");
+    div.className = "hero-slide" + (i === 0 ? " active" : "");
+    div.style.backgroundImage = `url('${src}')`;
+    slider.appendChild(div);
+
+    const dot = document.createElement("span");
+    dot.className = "hero-dot" + (i === 0 ? " active" : "");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  const slides = slider.querySelectorAll(".hero-slide");
+  const dots = dotsWrap.querySelectorAll(".hero-dot");
+
+  function goToSlide(index) {
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+    current = index;
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+  }
+
+  let autoplay = setInterval(() => goToSlide((current + 1) % slides.length), 5000);
+
+  // Touch swipe support
+  let startX = 0;
+  slider.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
+  slider.addEventListener("touchend", (e) => {
+    const diff = e.changedTouches[0].clientX - startX;
+    if (Math.abs(diff) > 50) {
+      clearInterval(autoplay);
+      goToSlide(diff < 0 ? (current + 1) % slides.length : (current - 1 + slides.length) % slides.length);
+      autoplay = setInterval(() => goToSlide((current + 1) % slides.length), 5000);
+    }
+  });
+}
+
+/* ----------------------------------------------------------
+   7. STATISTIK COUNTER (animasi saat masuk viewport)
+------------------------------------------------------------- */
+function buildStats() {
+  document.querySelectorAll(".stat-number").forEach((el) => {
+    const key = el.dataset.config;
+    const targetVal = parseInt(SETTINGS[key] || el.dataset.target, 10) || 0;
+    el.dataset.target = targetVal;
+    el.textContent = "0";
+  });
+}
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10) || 0;
+  const duration = 1400;
+  const start = performance.now();
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    el.textContent = Math.floor(progress * target).toLocaleString("id-ID");
+    if (progress < 1) requestAnimationFrame(tick);
+    else el.textContent = target.toLocaleString("id-ID");
+  }
+  requestAnimationFrame(tick);
+}
+
+/* ----------------------------------------------------------
+   8. GALERI (Masonry + Lightbox)
+------------------------------------------------------------- */
+let galleryImages = [];
+function buildGallery() {
+  const grid = document.getElementById("gallery-grid");
+  grid.innerHTML = "";
+  galleryImages = [];
+  for (let i = 1; i <= 20; i++) {
+    const src = SETTINGS[`GALERI${i}`];
+    if (!src) continue;
+    galleryImages.push(src);
+    const item = document.createElement("div");
+    item.className = "gallery-item";
+    item.innerHTML = `<img src="${src}" alt="Galeri kegiatan ${i}" loading="lazy">`;
+    item.addEventListener("click", () => openLightbox(galleryImages.length - 1));
+    grid.appendChild(item);
+  }
+}
+let lightboxIndex = 0;
+function openLightbox(index) {
+  lightboxIndex = index;
+  document.getElementById("lightbox-img").src = galleryImages[index];
+  document.getElementById("lightbox").classList.add("open");
+}
+function closeLightbox() {
+  document.getElementById("lightbox").classList.remove("open");
+}
+function navLightbox(dir) {
+  lightboxIndex = (lightboxIndex + dir + galleryImages.length) % galleryImages.length;
+  document.getElementById("lightbox-img").src = galleryImages[lightboxIndex];
+}
+
+/* ----------------------------------------------------------
+   9. TESTIMONI (Slider)
+------------------------------------------------------------- */
+const TESTIMONIALS = [
+  { name: "Ibu Sri Wahyuni", role: "Warga Mentikan", text: "Pelayanan di Puskesmas Mentikan sangat ramah dan cepat. Petugasnya sabar menjelaskan keluhan saya.", stars: 5 },
+  { name: "Bapak Agus Santoso", role: "Pasien Poli Umum", text: "Daftar online H-1 sangat membantu, tidak perlu mengantri lama saat datang.", stars: 5 },
+  { name: "Ibu Lestari", role: "Peserta Posyandu", text: "Program posyandu untuk anak saya terlaksana dengan baik dan terjadwal rutin.", stars: 4 },
+  { name: "Bapak Hendra", role: "Pengguna BPJS", text: "Proses skrining BPJS mudah diakses secara mandiri dari rumah.", stars: 5 },
+  { name: "Ibu Dewi Anggraini", role: "Lansia Binaan", text: "Petugas sangat perhatian terhadap pasien lansia seperti saya.", stars: 5 },
+];
+function buildTestimonials() {
+  const track = document.getElementById("testimonial-track");
+  const dotsWrap = document.getElementById("testimonial-dots");
+  track.innerHTML = "";
+  dotsWrap.innerHTML = "";
+  TESTIMONIALS.forEach((t, i) => {
+    const card = document.createElement("div");
+    card.className = "testimonial-card";
+    card.innerHTML = `
+      <div class="stars">${"★".repeat(t.stars)}${"☆".repeat(5 - t.stars)}</div>
+      <p>"${t.text}"</p>
+      <h5>${t.name}</h5>
+      <span>${t.role}</span>`;
+    track.appendChild(card);
+
+    const dot = document.createElement("span");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToTestimonial(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  let tCurrent = 0;
+  const dots = dotsWrap.querySelectorAll("span");
+  function goToTestimonial(i) {
+    tCurrent = i;
+    track.style.transform = `translateX(-${i * 100}%)`;
+    dots.forEach((d) => d.classList.remove("active"));
+    dots[i].classList.add("active");
+  }
+  setInterval(() => goToTestimonial((tCurrent + 1) % TESTIMONIALS.length), 6000);
+}
+
+/* ----------------------------------------------------------
+   10. FAQ ACCORDION
+------------------------------------------------------------- */
+const FAQS = [
+  { q: "Bagaimana cara daftar online?", a: "Klik menu \"Daftar Online H-1\" pada bagian Pelayanan Online, lalu isi formulir pendaftaran sesuai poli yang dituju." },
+  { q: "Berapa jam pelayanan Puskesmas Mentikan?", a: "Puskesmas melayani setiap hari Senin–Sabtu pada jam operasional yang tercantum di bagian Kontak Kami." },
+  { q: "Bagaimana cara konsultasi online?", a: "Gunakan layanan \"Sultan Mentikan\" pada menu Pelayanan Online untuk konsultasi langsung dengan tenaga medis." },
+  { q: "Apakah Puskesmas Mentikan menerima pasien BPJS?", a: "Ya, Puskesmas Mentikan menerima pasien BPJS dan menyediakan skrining mandiri BPJS secara online." },
+  { q: "Berapa nomor darurat yang bisa dihubungi?", a: "Gunakan tombol Emergency Call pada menu akses cepat atau tombol WhatsApp mengambang untuk situasi darurat." },
+];
+function buildFaq() {
+  const list = document.getElementById("faq-list");
+  list.innerHTML = "";
+  FAQS.forEach((f) => {
+    const item = document.createElement("div");
+    item.className = "faq-item";
+    item.innerHTML = `
+      <button class="faq-question">${f.q} <i data-lucide="chevron-down"></i></button>
+      <div class="faq-answer"><p>${f.a}</p></div>`;
+    const btn = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+    btn.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+      list.querySelectorAll(".faq-item").forEach((other) => {
+        other.classList.remove("open");
+        other.querySelector(".faq-answer").style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add("open");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+    list.appendChild(item);
+  });
+  if (window.lucide) lucide.createIcons();
+}
+
+/* ----------------------------------------------------------
+   11. NAVBAR: sticky shadow + mobile drawer
+------------------------------------------------------------- */
+function setupNavbar() {
+  const header = document.getElementById("site-header");
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 30);
+    document.getElementById("back-to-top").classList.toggle("show", window.scrollY > 500);
+  });
+
+  const navToggle = document.getElementById("nav-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  navToggle.addEventListener("click", () => {
+    const open = mobileNav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", open);
+  });
+  mobileNav.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => mobileNav.classList.remove("open"))
+  );
+
+  document.getElementById("back-to-top").addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  );
+}
+
+/* ----------------------------------------------------------
+   12. DARK MODE TOGGLE
+------------------------------------------------------------- */
+function setupDarkMode() {
+  const toggle = document.getElementById("dark-toggle");
+  const saved = localStorage.getItem("puskesmas_theme");
+  if (saved === "dark") document.body.classList.add("dark");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("puskesmas_theme", document.body.classList.contains("dark") ? "dark" : "light");
+    toggle.innerHTML = document.body.classList.contains("dark")
+      ? '<i data-lucide="sun"></i>'
+      : '<i data-lucide="moon"></i>';
+    if (window.lucide) lucide.createIcons();
+  });
+}
+
+/* ----------------------------------------------------------
+   13. SCROLL REVEAL + COUNTER TRIGGER (IntersectionObserver)
+------------------------------------------------------------- */
+function setupScrollReveal() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          entry.target.querySelectorAll(".stat-number").forEach((el) => {
+            if (!el.dataset.animated) {
+              el.dataset.animated = "true";
+              animateCounter(el);
+            }
+          });
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+}
+
+/* ----------------------------------------------------------
+   14. LIGHTBOX EVENTS
+------------------------------------------------------------- */
+function setupLightbox() {
+  document.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+  document.querySelector(".lightbox-prev").addEventListener("click", () => navLightbox(-1));
+  document.querySelector(".lightbox-next").addEventListener("click", () => navLightbox(1));
+  document.getElementById("lightbox").addEventListener("click", (e) => {
+    if (e.target.id === "lightbox") closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!document.getElementById("lightbox").classList.contains("open")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") navLightbox(-1);
+    if (e.key === "ArrowRight") navLightbox(1);
+  });
+}
+
+/* ----------------------------------------------------------
+   15. INIT
+------------------------------------------------------------- */
+document.addEventListener("DOMContentLoaded", async () => {
+  setupNavbar();
+  setupDarkMode();
+  setupLightbox();
+  buildTestimonials();
+  buildFaq();
+
+  await loadSettings();
+  applySettings();
+
+  setupScrollReveal();
+
+  if (window.lucide) lucide.createIcons();
+
+  // Sembunyikan loading screen
+  setTimeout(() => {
+    document.getElementById("loading-screen").classList.add("hidden");
+  }, 500);
+});
+
+// Re-render lucide icons setelah elemen dinamis dibuat (gallery/hero)
+window.addEventListener("load", () => {
+  if (window.lucide) lucide.createIcons();
+});
+
+</script>
+</body>
+</html>
